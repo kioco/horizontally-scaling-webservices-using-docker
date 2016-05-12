@@ -15,8 +15,7 @@ script:
     - docker build -t willprice/prime-server .
 deploy:
     provider: script
-    script: upload-to-dockerhub.sh
-    skip_cleanup: true
+    script: ./upload-to-dockerhub.sh
     on:
         branch: master
         python: 3.5
