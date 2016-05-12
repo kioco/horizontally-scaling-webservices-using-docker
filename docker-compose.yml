@@ -2,13 +2,16 @@ prime_server:
     build: .
     expose:
         - 5000
+    # Although these environment variables are not used in our image,
+    # they are our way of communicating with nginx-proxy to say what
+    # host this should be served on!
+    environment:
+        VIRTUAL_HOST: "localhost"
+        VIRTUAL_PORT: 5000
 proxy:
     image: jwilder/nginx-proxy
     volumes:
         - '/var/run/docker.sock:/tmp/docker.sock:ro'
-    environment:
-        VIRTUAL_HOST: "localhost"
-        VIRTUAL_PORT: 5000
     ports:
         - '80:80'
         - '443:443'
