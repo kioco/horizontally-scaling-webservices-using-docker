@@ -16,6 +16,7 @@ script:
 deploy:
     provider: script
     script: upload-to-dockerhub.sh
+    skip_cleanup: true
     on:
         branch: master
         python: 3.5
