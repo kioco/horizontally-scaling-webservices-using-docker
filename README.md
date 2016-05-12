@@ -1,5 +1,8 @@
 # Horizontally scaling a web service
-[![Docker hub badge](http://dockeri.co/image/willprice/prime-server)](https://hub.docker.com/r/willprice/prime-server/)
+[![Docker hub
+stars](https://img.shields.io/docker/stars/willprice/prime-server.svg)](https://hub.docker.com/r/willprice/prime-server/)
+[![Docker hub
+pulls](https://img.shields.io/docker/pulls/willprice/prime-server.svg)](https://hub.docker.com/r/willprice/prime-server/)
 [![Build Status](https://travis-ci.org/willprice/horizontally-scaling-webservices-using-docker.svg?branch=master)](https://travis-ci.org/willprice/horizontally-scaling-webservices-using-docker)
 
 This repository demonstrates how you can run a trivial web service that can be run in parallel behind a reverse proxy, and distribute requests accross multiple concurrent instances of the web service.
