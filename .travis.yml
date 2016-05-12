@@ -18,3 +18,4 @@ deploy:
     script: upload-to-dockerhub.sh
     on:
         branch: master
+        python: 3.5
