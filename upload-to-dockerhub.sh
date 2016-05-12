@@ -6,9 +6,7 @@ done
 
 DOCKER_IMAGE_NAME="${1:-willprice/prime-server}"
 
-echo "Logging in to Dockerhub"
 sudo docker login -e="$DOCKER_EMAIL" \
                   -u="$DOCKER_USERNAME" \
                   -p="$DOCKER_PASSWORD"
-echo "Pushing '$DOCKER_IMAGE_NAME' to Dockerhub"
 sudo docker push "$DOCKER_IMAGE_NAME"

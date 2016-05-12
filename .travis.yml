@@ -13,4 +13,9 @@ install:
 script:
     - python prime_tests.py
     - docker build -t willprice/prime-server .
-after_success: .travis/deploy.sh
+deploy:
+    provider: script
+    script: ./upload-to-dockerhub.sh
+    on:
+        branch: master
+        python: 3.5
